@@ -10,6 +10,11 @@ This is a secure template for electron applications. Written following the lates
 
 Under the hood is used [Vite] — superfast, nextgen bundler, and [electron-builder] for compilation.
 
+## Fork notice
+
+> This is a fork of the amazing [project](https://github.com/cawa-93/vite-electron-builder) by [cawa-93](https://github.com/cawa-93).
+
+> Replaces vue for react + react-router with [fast refresh](https://www.npmjs.com/package/@vitejs/plugin-react) support.
 
 ___
 ### Support

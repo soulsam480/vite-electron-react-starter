@@ -13,34 +13,37 @@
     "pretest": "npm run build",
     "test": "node tests/app.spec.js",
     "watch": "node scripts/watch.js",
-    "lint": "eslint . --ext js,ts,vue",
+    "lint": "eslint . --ext js,ts,tsx",
     "typecheck-main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck-preload": "tsc --noEmit -p packages/preload/tsconfig.json",
-    "typecheck-renderer": "vue-tsc --noEmit -p packages/renderer/tsconfig.json",
+    "typecheck-renderer": "tsc --noEmit -p packages/renderer/tsconfig.json",
     "typecheck": "npm run typecheck-main && npm run typecheck-preload && npm run typecheck-renderer",
     "pretypecheck-renderer": "dts-cb -i packages/preload/src/**/*.ts -o packages/preload/exposedInMainWorld.d.ts"
   },
   "devDependencies": {
     "@types/electron-devtools-installer": "2.2.1",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "5.8.0",
-    "@vitejs/plugin-vue": "2.0.1",
+    "@vitejs/plugin-react": "^1.1.3",
     "cross-env": "7.0.3",
     "dts-for-context-bridge": "0.7.1",
     "electron": "16.0.5",
     "electron-builder": "22.14.5",
     "electron-devtools-installer": "3.2.0",
     "eslint": "8.5.0",
-    "eslint-plugin-vue": "8.2.0",
+    "eslint-plugin-react": "^7.28.0",
     "nano-staged": "0.5.0",
     "playwright": "1.17.1",
     "simple-git-hooks": "2.7.0",
     "typescript": "4.5.4",
-    "vite": "2.7.7",
-    "vue-tsc": "0.30.1"
+    "vite": "2.7.7"
   },
   "dependencies": {
+    "@typescript-eslint/parser": "^5.8.0",
     "electron-updater": "4.6.5",
-    "vue": "3.2.26",
-    "vue-router": "4.0.12"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
   }
 }

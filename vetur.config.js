@@ -10,7 +10,7 @@ module.exports = {
       tsconfig: './tsconfig.json',
       snippetFolder: './.vscode/vetur/snippets',
       globalComponents: [
-        './src/components/**/*.vue',
+        './src/components/**/*.tsx',
       ],
     },
     {
